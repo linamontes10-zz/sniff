@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 Hello!
-=======
-Hello! poop
->>>>>>> 294ad3eb7747a33c143959ae144cbe5a2a6c39a6
