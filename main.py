@@ -16,7 +16,34 @@ class HomeHandler(webapp2.RequestHandler):
         new = self.request.get('posts')
         template = jinja_current_dir.get_template('')
 
+class PlaydateHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_current_dir.get_template('/templates/playdate.html')
+        self.response.write(template.render())
+    def post(self):
+        new = self.request.get('posts')
+        template = jinja_current_dir.get_template('')
+
+class DogParksHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_current_dir.get_template('/templates/dogparks.html')
+        self.response.write(template.render())
+    def post(self):
+        new = self.request.get('posts')
+        template = jinja_current_dir.get_template('')
+
+class AboutUsHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_current_dir.get_template('/templates/aboutus.html')
+        self.response.write(template.render())
+    def post(self):
+        new = self.request.get('posts')
+        template = jinja_current_dir.get_template('')
+
 
 app = webapp2.WSGIApplication([
     ('/home', HomeHandler),
+    ('/dogparks', DogParksHandler),
+    ('/playdate', PlaydateHandler),
+    ('/aboutus', AboutUsHandler),
 ], debug=True)
