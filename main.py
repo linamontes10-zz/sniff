@@ -1,4 +1,5 @@
 import webapp2
+import jinja2
 from google.appengine.ext import ndb
 
 jinja_current_dir = jinja2.Environment(
@@ -6,7 +7,7 @@ jinja_current_dir = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class MainHandler(webapp2.RequestHandler):
+class HomeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_current_dir.get_template('sniff.html')
         self.response.write(template.render())
@@ -16,5 +17,5 @@ class MainHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler),
+    ('/home', HomeHandler),
 ], debug=True)
