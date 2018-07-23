@@ -10,7 +10,7 @@ jinja_current_dir = jinja2.Environment(
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_current_dir.get_template('homepage.html')
+        template = jinja_current_dir.get_template('/templates/homepage.html')
         self.response.write(template.render())
     def post(self):
         new = self.request.get('posts')
