@@ -2,17 +2,42 @@
 <html>
 <body>
 <style>
+  li {
+    float: left;
+    border-right: 1px solid #bbb;
+    overflow: hidden;
+}
+  li:last-child {
+    border-right: none;
+  }
+  li a {
+    text-align: center;
+    padding: 100px 154px;
+    text-decoration: none;
+    color: white;
+  }
+  li a:hover {
+      background-color: #343d46;
+      color: white;
+  }
+  .active {
+    background-color: #4CAF50;
+  }
   ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    position: fixed;
+    background-color: #FF0000;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 </style>
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#playdate">News</a></li>
-  <li><a href="#dogparks">Contact</a></li>
-  <li><a href="#aboutus">About</a></li>
+  <li><a href="/home">Home</a></li>
+  <li><a class="active" href="/playdate">Playdate</a></li>
+  <li><a href="/dogparks">Dog Parks</a></li>
+  <li><a href="/aboutus">About</a></li>
 </ul>
 </body>
 </html>
