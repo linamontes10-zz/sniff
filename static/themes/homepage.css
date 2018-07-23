@@ -1,5 +1,35 @@
 h1 {
   color: white;
-  background-color: #52DBFF;
   font-family: Arial;
+  text-align: center;
 }
+body {
+    background-color: #52DBFF;
+}
+
+
+.box{
+  height:50px;
+  width:750px
+  background-color:white;
+
+}
+#nav li {
+  display: inline;}
+ .parent{
+   border:2px solid black;
+   margin:100px 0;
+   height:100px;
+   background-color:gold;
+
+   /*Flexbox*/
+   display: flex;
+   /*line everything in a row */
+   flex-direction:row;
+  flex-wrap:wrap;
+  /* center horizontally*/
+
+justify-content: center;
+/*centers vertically*/
+align-items:center;
+ }
