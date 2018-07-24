@@ -39,8 +39,8 @@ ul {
 }
 
 img {
-  height:70%;
-  width:50%;
+  height:25%;
+  width:25%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -48,7 +48,7 @@ img {
 
 .dogprofiles {
   margin: 50px;
-  background-color: papayawhip;
+  background-color: #52DBFF;
 }
 
 h2 {
@@ -67,7 +67,7 @@ h3 {
 
 .doginfo {
   margin: auto;
-  background-color: papayawhip;
+  background-color: #52DBFF;
   padding:10px;
   color: salmon;
 }
