@@ -21,8 +21,13 @@ class PlaydateHandler(webapp2.RequestHandler):
         template = jinja_current_dir.get_template('/templates/playdate.html')
         self.response.write(template.render())
     def post(self):
-        new = self.request.get('posts')
-        template = jinja_current_dir.get_template('')
+        zipcode = self.request.get('zipcode')
+        template_vars = {
+            'zipcode' : zipcode,
+        }
+
+        template = jinja_current_dir.get_template('/templates/newplaydate.html')
+        self.response.write(template.render(template_vars))
 
 class DogParksHandler(webapp2.RequestHandler):
     def get(self):
