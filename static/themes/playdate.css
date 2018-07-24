@@ -4,7 +4,12 @@ h1 {
   text-align: center;
 }
 body {
-    background-color: #52DBFF;
+    background-image:url('https://media.giphy.com/media/mCRJDo24UvJMA/giphy.gif');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
 }
 
 li {

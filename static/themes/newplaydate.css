@@ -4,9 +4,8 @@ h1 {
   text-align: center;
 }
 body {
-    background-color: #52DBFF;
+  background-color: #52DBFF;
 }
-
 li {
   float: left;
   border-right: 1px solid #bbb;
