@@ -37,3 +37,33 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+img {
+  height:70%;
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dogprofiles {
+  margin: 50px;
+  background-color: papayawhip;
+}
+
+h2 {
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+h3 {
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+.doginfo {
+  margin: auto;
+  background-color: papayawhip;
+}
