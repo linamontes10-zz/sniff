@@ -55,15 +55,19 @@ h2 {
   color: white;
   font-family: Arial;
   text-align: center;
+  color: salmon;
 }
 
 h3 {
   color: white;
   font-family: Arial;
   text-align: center;
+  color: salmon;
 }
 
 .doginfo {
   margin: auto;
   background-color: papayawhip;
+  padding:10px;
+  color: salmon;
 }
