@@ -49,6 +49,7 @@ img {
 .dogprofiles {
   margin: 50px;
   background-color: #52DBFF;
+  display:inline-block;
 }
 
 h2 {
