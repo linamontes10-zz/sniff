@@ -147,8 +147,13 @@ table {
   to {opacity: 1}
 }
 
-.imagelinks{
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+.links {
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imagelinks {
+  border:10px;
 }
