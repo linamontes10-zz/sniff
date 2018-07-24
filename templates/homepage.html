@@ -5,9 +5,9 @@
   <link href="/static/themes/homepage.css" rel="stylesheet">
 </head>
 <body>
-  <h1>SNIFF<br/><sub>finding a best friend for man's best friend!</sub></h1>
+  <h1>SNIFF<br/><sub>finding a best friend for human's best friend!</sub></h1>
 
-  <ul>
+  <ul id="navbar">
     <li><a class="active" href="/home">Home</a></li>
     <li><a href="/playdate">Playdate</a></li>
     <li><a href="/dogparks">Dog Parks</a></li>
@@ -16,6 +16,7 @@
 
   <!-- Slideshow container -->
 <div class="slideshow-container">
+
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 5</div>
@@ -57,14 +58,27 @@
   <span class="dot" onclick="currentSlide(5)"></span>
 </div>
 
+<div>
   <h4> Links </h4>
-    <dl>
+  <div class="links">
+    <a href="https://foursquare.com/top-places/new-york-city/best-places-grooming">
+      <img class="imagelinks" src="/static/images/grooming.png">
+    </a>
 
-      <dt><u>Grooming</u></dt>
-      <dd><a href="https://dpethotels.com/">Pet Hotels</a></dd>
-      <dt><u>Training</u></dt>
-      <dd><a href="https://www.wagthedognyc.com/">Wag the Dog NYC</a></dd>
-    </dl>
+    <a href="https://dpethotels.com/">
+      <img class="imagelinks" src="/static/images/dogbeach.jpg">
+    </a>
+
+    <a href="https://www.rover.com/blog/important-dog-training-skills/">
+      <img class="imagelinks" src="/static/images/training.jpg">
+    </a>
+
+    <a href="https://www.wagthedognyc.com/">
+      <img class="imagelinks" src="/static/images/wagdognyc.jpg">
+    </a>
+  </div>
+</div>
+
 
   <p> "WOOF WOOF!!!!!"- Austin </p>
 <script src="/static/scripts/homepage.js"></script>
