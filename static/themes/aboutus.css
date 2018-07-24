@@ -47,6 +47,13 @@ table {
   text-align: center;
   color: salmon;
 }
+
+#sniff {
+  color: salmon;
+  font-family:Arial;
+  text-align: center;
+  width: 100%;
+}
 /* img {
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
