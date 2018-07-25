@@ -2,6 +2,7 @@ import webapp2
 import jinja2
 import os
 from google.appengine.ext import ndb
+from model import *
 
 jinja_current_dir = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -20,12 +21,28 @@ class PlaydateHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_current_dir.get_template('/templates/playdate.html')
         self.response.write(template.render())
+
     def post(self):
+        name = self.request.get('name')
+        ownername = self.request.get('ownername')
+        breed = self.request.get('breed')
+        age = self.request.get('age')
+        size = self.request.get('size')
+        personality = self.request.get('personality')
+        email = self.request.get('email')
         zipcode = self.request.get('zipcode')
+
+        dog_post = Dog(name=name,ownername=ownername,breed=breed,age=int(age),size=size,personality=personality, email=email,zipcode=int(zipcode))
+        dog_key = dog_post.put()
+
+        zipcode_query = Dog.query(Dog.zipcode==int(zipcode))
+        check_zipcode_query = zipcode_query.fetch()
+        check_zipcode_query.insert(0, dog_post)
+
         template_vars = {
+            'dogs' : check_zipcode_query,
             'zipcode' : zipcode,
         }
-
         template = jinja_current_dir.get_template('/templates/newplaydate.html')
         self.response.write(template.render(template_vars))
 
