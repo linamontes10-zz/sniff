@@ -38,8 +38,8 @@ ul {
   padding: 0;
 }
 #map {
-  height: 400px;
-  width: 600px;
+  height: 600px;
+  width: 800px;
   align-items: center
 }
 /* Optional: Makes the sample page fill the window. */
