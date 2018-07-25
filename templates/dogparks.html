@@ -14,11 +14,12 @@
 
 
   <h1>DOG PARKS</h1>
+  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+  <div class="center-div">
+  <div id="map"></div></div>
 
-  <div id="googleMap" style="width:100%;height:600px;"></div>
-
-  <script src="/static/scripts/sniff.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUVENwjhZSt6MCkATJ_e3GFHhhy68dqKQ&callback=myMap"></script>
-
+  <script src="/static/scripts/dogparks.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnW_FyhuYYE4gpmYiUCILrfmSBRjlkWzQ&libraries=places&callback=initAutocomplete"
+       async defer></script>
 </body>
 </html>

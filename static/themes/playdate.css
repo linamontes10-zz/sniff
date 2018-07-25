@@ -127,11 +127,14 @@ html, body {
 #target {
   width: 345px;
 }
-.center-div
-{
+.center-div{
   margin: 50px;
   display: flex;
   justify-content: center;
+}
 
-
+.searchflex{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

@@ -12,19 +12,48 @@
     <li><a href="/aboutus">About</a></li>
   </ul>
   <h1> Find Your Match </h1>
-    <div> Find Sniffers Near You! </div>
-    <form method="post">
-      Zip Code:
-      <input type="text" name="zipcode">
-      <br>
-      <button type="submit"> Submit </button>
-    </form>
-      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-      <div class="center-div">
-      <div id="map"></div></div>
 
-      <script src="/static/scripts/playdate.js"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnW_FyhuYYE4gpmYiUCILrfmSBRjlkWzQ&libraries=places&callback=initAutocomplete"
-           async defer></script>
+  <div class="searchflex">
+    <div class="search"> Find Sniffers Near You!
+      <form method="post">
+        <p>
+            What is your dog's name?
+          <input type="text" name="name" placeholder="Princess Cookie">
+          <br>
+            What is your name?
+          <br>
+          <input type="text" cols="50" name="ownername" placeholder="Jane Doe">
+          <br>
+            What breed is your dog?
+          <input type="text" name="breed" placeholder="German Shepherd">
+          <br>
+            How old is your dog?
+          <input type="text" name="age" placeholder="insert age">
+          <br>
+            What size is your dog?
+          <input type="text" name="size" placeholder="size">
+          <br>
+            How would you describe your dog's personality?
+          <input type="text" name="personality" placeholder="playful">
+          <br>
+            What is your email, for playdate scheduling purposes?
+          <input type="text" name="email" placeholder="example@gmail.com">
+          <br>
+            Lastly, what is your zipcode?
+          <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" />
+          <br>
+          <button type="submit"> Submit </button>
+        </p>
+      </form>
+    </div>
+
+    <form method="post">
+      <div class="search"> Search your zipcode
+        <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" />
+        <br>
+        <button type="submit"> Submit </button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>

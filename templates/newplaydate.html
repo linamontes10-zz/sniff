@@ -13,8 +13,31 @@
 
   <h1>Your Sniffers at {{zipcode}} are waiting!!:</h1>
 
- <div class="dogprofiles">
-<h2>  Austin </h2>
+  {% for dog in dogs%}
+    <div class="dogprofiles">
+      <h2>  {{dog.name}} </h2>
+       <img src="/static/images/Austin.jpg"> <br/>
+       <h3 class="doginfo">
+         Owner Name: {{dog.ownername}}
+          <br/>
+         Breed: {{dog.breed}}
+         <br>
+         Age: {{dog.age}}
+         <br>
+         Size: {{dog.size}}
+         <br/>
+         Personality: {{dog.personality}}
+         <br/>
+         <a href="{{email}}">Email Us</a>
+         <br>
+         Zip code: {{dog.zipcode}}
+       </h3>
+     </div>
+    {% endfor %}
+
+
+ <!-- <div class="dogprofiles">
+   <h2>  Austin </h2>
     <img src="/static/images/Austin.jpg"> <br/>
     <h3 class="doginfo">
       Owner Name: Lina Montes
@@ -91,7 +114,7 @@
       <a href="mailto:cookieandefrain@gmail.com">Email Us</a>
 
     </h3>
-  </div>
+  </div> -->
 </td>
 </tr>
 </table>
