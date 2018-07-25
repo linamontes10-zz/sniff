@@ -101,4 +101,4 @@ setInterval(function(){
     document.body.style.backgroundImage= "url(" + allimages[url] + ")"
     url = 0
   }
-},500);
+},1000);
