@@ -137,4 +137,28 @@ html, body {
   display:flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background-color: papayawhip;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.search {
+  margin: 50px;
+  color: salmon;
+  font-family: "Trebuchet MS";
+}
+
+input {
+  color: salmon;
+  font-family: "Trebuchet MS";
+}
+
+button {
+  color: salmon;
+  font-family: "Trebuchet MS";
+}
+
+select{
+  color: salmon;
+  font-family: "Trebuchet MS";
 }

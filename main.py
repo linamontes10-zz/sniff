@@ -24,11 +24,11 @@ class PlaydateHandler(webapp2.RequestHandler):
 
     def post(self):
         # Only zip code search
+        name = self.request.get('name')
         if not name:
             zipcode = self.request.get('zipcode')
         # add dog to zip code
         else:
-            name = self.request.get('name')
             ownername = self.request.get('ownername')
             breed = self.request.get('breed')
             age = self.request.get('age')
@@ -42,10 +42,20 @@ class PlaydateHandler(webapp2.RequestHandler):
 
         zipcode_query = Dog.query(Dog.zipcode==int(zipcode))
         check_zipcode_query = zipcode_query.fetch()
-        check_zipcode_query.insert(0, dog_post)
+
+        if name:
+            check_zipcode_query.insert(0, dog_post)
+
+        if not check_zipcode_query:
+            dogs = Dog.query().fetch()
+            dogsfound = False
+        else:
+            dogs = check_zipcode_query
+            dogsfound = True
 
         template_vars = {
-            'dogs' : check_zipcode_query,
+            'dogs' : dogs,
+            'dogsfound' : dogsfound,
             'zipcode' : zipcode,
         }
         template = jinja_current_dir.get_template('/templates/newplaydate.html')

@@ -72,3 +72,33 @@ h3 {
   padding:10px;
   color: salmon;
 }
+
+.search {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: papayawhip;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: salmon;
+  font-family: "Trebuchet MS";
+}
+
+input {
+  color: salmon;
+  font-family: "Trebuchet MS";
+}
+
+button {
+  color: salmon;
+  font-family: "Trebuchet MS";
+}
+
+select{
+  color: salmon;
+  font-family: "Trebuchet MS";
+}
+
+#addquestion {
+  font-size: 30px;
+}
