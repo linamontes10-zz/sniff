@@ -18,29 +18,33 @@
       <form method="post">
         <p>
             What is your dog's name?
-          <input type="text" name="name" placeholder="Princess Cookie">
+          <input type="text" name="name" placeholder="ex. Princess Cookie">
           <br>
             What is your name?
-          <br>
-          <input type="text" cols="50" name="ownername" placeholder="Jane Doe">
+          <input type="text" cols="50" name="ownername" placeholder="ex. Jane Doe">
           <br>
             What breed is your dog?
-          <input type="text" name="breed" placeholder="German Shepherd">
+          <input type="text" name="breed" placeholder="ex. German Shepherd">
           <br>
             How old is your dog?
-          <input type="text" name="age" placeholder="insert age">
+          <input type="text" name="age" placeholder="ex. 4">
           <br>
             What size is your dog?
-          <input type="text" name="size" placeholder="size">
+          <select name="size">
+            <option value="small">Small (under 20 pounds)</option>
+            <option value="medium">Medium (25-50 pounds)</option>
+            <option value="large">Large (50-70 pounds)</option>
+            <option value="extra large">Extra Large (70+ pounds )</option>
+          </select>
           <br>
             How would you describe your dog's personality?
-          <input type="text" name="personality" placeholder="playful">
+          <input type="text" name="personality" placeholder="ex. playful">
           <br>
             What is your email, for playdate scheduling purposes?
           <input type="text" name="email" placeholder="example@gmail.com">
           <br>
             Lastly, what is your zipcode?
-          <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" />
+          <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" placeholder="ex. 11111"/>
           <br>
           <button type="submit"> Submit </button>
         </p>
@@ -49,7 +53,7 @@
 
     <form method="post">
       <div class="search"> Search your zipcode
-        <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" />
+        <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" placeholder="ex. 11111"/>
         <br>
         <button type="submit"> Submit </button>
       </div>

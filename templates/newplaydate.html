@@ -11,8 +11,48 @@
     <li><a href="/aboutus">About</a></li>
   </ul>
 
-  <h1>Your Sniffers at {{zipcode}} are waiting!!:</h1>
-
+  {% if dogsfound %}
+    <h1>  Your Sniffers at {{zipcode}} are waiting:</h1>
+  {% else %}
+    <h1>  There are no sniffers at {{zipcode}} waiting, but here are all the sniffers:</h1>
+    <div class="search">
+      <form method="post">
+        <p id="addquestion"> Want to upload your dog to your zipcode instead? Fill out the form below: </p>
+        <p>
+            What is your dog's name?
+          <input type="text" name="name" placeholder="ex. Princess Cookie">
+          <br>
+            What is your name?
+          <input type="text" cols="50" name="ownername" placeholder="ex. Jane Doe">
+          <br>
+            What breed is your dog?
+          <input type="text" name="breed" placeholder="ex. German Shepherd">
+          <br>
+            How old is your dog?
+          <input type="text" name="age" placeholder="ex. 4">
+          <br>
+            What size is your dog?
+          <select name="size">
+            <option value="volvo">Small (under 20 pounds)</option>
+            <option value="saab">Medium (25-50 pounds)</option>
+            <option value="fiat">Large (50-70 pounds)</option>
+            <option value="audi">Extra Large (70+ pounds )</option>
+          </select>
+          <br>
+            How would you describe your dog's personality?
+          <input type="text" name="personality" placeholder="ex. playful">
+          <br>
+            What is your email, for playdate scheduling purposes?
+          <input type="text" name="email" placeholder="example@gmail.com">
+          <br>
+            Lastly, what is your zipcode?
+          <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" placeholder="ex. 11111"/>
+          <br>
+          <button type="submit"> Submit </button>
+        </p>
+      </form>
+    </div>
+  {% endif %}
   {% for dog in dogs%}
     <div class="dogprofiles">
       <h2>  {{dog.name}} </h2>
@@ -28,12 +68,14 @@
          <br/>
          Personality: {{dog.personality}}
          <br/>
-         <a href="{{email}}">Email Us</a>
+         <a href="mailto:{{dog.email}}">Email Us</a>
          <br>
          Zip code: {{dog.zipcode}}
        </h3>
      </div>
     {% endfor %}
+
+
 
 
  <!-- <div class="dogprofiles">
