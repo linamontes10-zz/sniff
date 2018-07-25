@@ -23,17 +23,22 @@ class PlaydateHandler(webapp2.RequestHandler):
         self.response.write(template.render())
 
     def post(self):
-        name = self.request.get('name')
-        ownername = self.request.get('ownername')
-        breed = self.request.get('breed')
-        age = self.request.get('age')
-        size = self.request.get('size')
-        personality = self.request.get('personality')
-        email = self.request.get('email')
-        zipcode = self.request.get('zipcode')
+        # Only zip code search
+        if not name:
+            zipcode = self.request.get('zipcode')
+        # add dog to zip code
+        else:
+            name = self.request.get('name')
+            ownername = self.request.get('ownername')
+            breed = self.request.get('breed')
+            age = self.request.get('age')
+            size = self.request.get('size')
+            personality = self.request.get('personality')
+            email = self.request.get('email')
+            zipcode = self.request.get('zipcode')
 
-        dog_post = Dog(name=name,ownername=ownername,breed=breed,age=int(age),size=size,personality=personality, email=email,zipcode=int(zipcode))
-        dog_key = dog_post.put()
+            dog_post = Dog(name=name,ownername=ownername,breed=breed,age=int(age),size=size,personality=personality, email=email,zipcode=int(zipcode))
+            dog_key = dog_post.put()
 
         zipcode_query = Dog.query(Dog.zipcode==int(zipcode))
         check_zipcode_query = zipcode_query.fetch()
