@@ -36,6 +36,9 @@ function myFunction() {
       if (places.length == 0) {
         return;
       }
+      if (places.length==1) {
+        map.setCenter(places[0].geometry.location)
+      }
 
       // Clear out the old markers.
       markers.forEach(function(marker) {
@@ -72,7 +75,9 @@ function myFunction() {
         google.maps.event.addListener(marker, 'click', function() {
           console.log(place);
          infowindow.setContent('<div style = "text-align:center;"><strong>' +  place.name + '</strong><br>' + place.formatted_address + '<br><a href="https://www.google.com/maps/search/?api=1&query=' + encodeURI(place.formatted_address) + '">View on Google Maps</a></div>')
-         infowindow.open(map, this);});
+         infowindow.open(map, this);
+          var latLng = marker.getPosition();
+          map.setCenter(latLng);});
 
         if (place.geometry.viewport) {
           // Only geocodes have viewport.
