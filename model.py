@@ -9,3 +9,4 @@ class Dog(ndb.Model):
     personality = ndb.StringProperty()
     email = ndb.StringProperty()
     zipcode = ndb.IntegerProperty()
+    image = ndb.BlobProperty()

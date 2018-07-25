@@ -57,6 +57,7 @@
     <div class="dogprofiles">
       <h2>  {{dog.name}} </h2>
        <img src="/static/images/Austin.jpg"> <br/>
+       <img src="/image?id={{dog.key.urlsafe()}}"> <br/>
        <h3 class="doginfo">
          Owner Name: {{dog.ownername}}
           <br/>
