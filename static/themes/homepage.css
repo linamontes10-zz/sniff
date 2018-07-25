@@ -4,8 +4,12 @@ h1 {
   text-align: center;
 }
 body {
-    background-color: #52DBFF;
+    background-image: url(/static/images/background.jpg);
+    margin: 20px 5px 5px 20px;
+    padding:0;
 }
+
+
 
 li {
   float: left;
@@ -40,7 +44,7 @@ ul {
   margin: 0;
   padding: 0;
   z-index: 500;
-}
+} */
 table {
     white-space: normal;
     line-height: normal;
@@ -157,4 +161,12 @@ table {
 .imagelinks {
   margin:10px;
 
+}
+
+h4 {
+  text-align: center;
+}
+
+p{
+  text-align: center;
 }
