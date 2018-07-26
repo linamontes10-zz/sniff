@@ -7,7 +7,7 @@ body {
       background-image: url(/static/images/background.jpg);
 }
 
-li {
+/* li {
   float: left;
   border-right: 1px solid #bbb;
   overflow: hidden;
@@ -36,7 +36,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
+} */
 #map {
   height: 600px;
   width: 800px;
@@ -124,6 +124,10 @@ html, body {
   display: flex;
   justify-content: center;
 }
+
+
+
+
 .nav ul {
   list-style: none;
   background-color: #444;
