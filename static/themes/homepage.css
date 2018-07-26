@@ -14,6 +14,14 @@ body {
     width:100%;
 }
 
+#names{
+
+
+}
+.stuff{
+  background-color: #2A789A;
+  text-align: center;
+}
 .header{
   /* margin: auto; */
    width: 100%;
@@ -23,6 +31,8 @@ body {
    background-color: #2A789A;
 
 }
+
+
 
 
 
@@ -196,6 +206,7 @@ table {
 }
 
 .links {
+  /* background-color: #2A789A; */
   display: flex;
   flex: row;
   flex-wrap: wrap;
