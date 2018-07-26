@@ -5,6 +5,10 @@ h1 {
 }
 body {
       background-image: url(/static/images/background.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: background-image  .9s ease-in-out;
+
 }
 
 li {
@@ -39,8 +43,8 @@ ul {
 }
 #map {
   height: 600px;
-  width: 800px;
-  align-items: center
+  width: 600px;
+  align-items: center;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
