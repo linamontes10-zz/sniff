@@ -8,8 +8,10 @@ h1 {
   text-align: center;
   font-size: 17px;
 }
+
 body {
   background-image: url(/static/images/background.jpg);
+    width:100%;
 }
 
 .header{
@@ -19,21 +21,33 @@ body {
    /* border: 3px solid black; */
    /* padding: 10px; */
    background-color: #2A789A;
-   
 }
 
-img {
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#dogimages {
   height:250px;
-  width:215px;
+  width:320px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.flex {
+  display : flex;
+  justify-content : space-evenly;
+  flex-wrap : wrap-reverse;
 }
 
 .dogprofiles {
   margin: 50px;
   background-color: white;
   display: inline-block;
+  width: 350px;
 }
 
 h2 {

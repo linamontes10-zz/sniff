@@ -77,8 +77,6 @@ class ImageHandler(webapp2.RequestHandler):
         dog_key_object = ndb.Key(urlsafe=dog_key)
         dogimage = dog_key_object.get()
 
-        print(dogimage)
-
         if dogimage.image:
             self.response.headers['Content-Type'] = "image/jpg"
             self.response.out.write(dogimage.image)

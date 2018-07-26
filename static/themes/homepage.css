@@ -11,6 +11,7 @@ h1 {
 }
 body {
   background-image: url(/static/images/background.jpg);
+    width:100%;
 }
 
 .header{

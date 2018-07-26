@@ -10,6 +10,7 @@ h1 {
 }
 body {
   background-image: url(/static/images/background.jpg);
+  width:100%;
 }
 
 .header{
@@ -44,6 +45,13 @@ body {
     display: inline-block;
 
 }
+
+.flex {
+  display : flex;
+  justify-content : space-evenly;
+  flex-wrap : wrap-reverse;
+}
+
 h2 {
 
   font-family: Arial;
