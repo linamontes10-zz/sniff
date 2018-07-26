@@ -38,7 +38,6 @@ class PlaydateHandler(webapp2.RequestHandler):
             zipcode = self.request.get('zipcode')
             image = self.request.get('image')
 
-            dog_post = Dog(name=name,ownername=ownername,breed=breed,age=int(age),size=size,personality=personality, email=email,zipcode=int(zipcode))
             dog_post = Dog(name=name,ownername=ownername,breed=breed,age=int(age),size=size,personality=personality, email=email,zipcode=int(zipcode), image=image)
             dog_key = dog_post.put()
 
@@ -72,16 +71,17 @@ class DogParksHandler(webapp2.RequestHandler):
         template = jinja_current_dir.get_template('')
 
 class ImageHandler(webapp2.RequestHandler):
-  def get(self):
-    dog_key = self.request.get('id')
-    dog_key_object = ndb.Key(urlsafe=dog_key)
-    dogimage = dog_key_object.get()
+    def get(self):
+        dog_key = self.request.get('id')
+        dog_key_object = ndb.Key(urlsafe=dog_key)
+        dogimage = dog_key_object.get()
 
-    print(dogimage.image)
-    if dogimage.image:
-       self.response.headers['Content-Type'] = "image/jpg"
-       self.response.out.write(dogimage.image)
-    print("Lina is here")
+        print(dogimage.image)
+
+        if dogimage.image:
+            self.response.headers['Content-Type'] = "image/jpg"
+            self.response.out.write(dogimage.image)
+        print("Lina is here")
 
 class AboutUsHandler(webapp2.RequestHandler):
     def get(self):
@@ -95,6 +95,7 @@ class AboutUsHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/image', ImageHandler),
     ('/home', HomeHandler),
+    ('/', HomeHandler),
     ('/dogparks', DogParksHandler),
     ('/playdate', PlaydateHandler),
     ('/aboutus', AboutUsHandler),
