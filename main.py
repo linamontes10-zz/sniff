@@ -24,6 +24,7 @@ class PlaydateHandler(webapp2.RequestHandler):
 
     def post(self):
         # Only zip code search
+        print(self.request)
         name = self.request.get('name')
         if not name:
             zipcode = self.request.get('zipcode')
@@ -36,7 +37,7 @@ class PlaydateHandler(webapp2.RequestHandler):
             personality = self.request.get('personality')
             email = self.request.get('email')
             zipcode = self.request.get('zipcode')
-            image = self.request.get('image')
+            image = str(self.request.get('image'))
 
             dog_post = Dog(name=name,ownername=ownername,breed=breed,age=int(age),size=size,personality=personality, email=email,zipcode=int(zipcode), image=image)
             dog_key = dog_post.put()
@@ -76,7 +77,7 @@ class ImageHandler(webapp2.RequestHandler):
         dog_key_object = ndb.Key(urlsafe=dog_key)
         dogimage = dog_key_object.get()
 
-        print(dogimage.image)
+        print(dogimage)
 
         if dogimage.image:
             self.response.headers['Content-Type'] = "image/jpg"
