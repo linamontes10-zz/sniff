@@ -1,7 +1,25 @@
 h1 {
-  color: white;
   font-family: Arial;
   text-align: center;
+}
+.sub {
+  color:;
+  font-family:Arial;
+  text-align: center;
+  font-size: 17px;
+}
+/* body {
+  background-image: url(/static/images/background.jpg);
+} */
+
+.header{
+  margin: auto;
+   width: 25%;
+   height:25%;
+   /* border: 3px solid black; */
+   padding: 10px;
+   background-color: #2A789A;
+
 }
 body {
     background-image:url('https://media.giphy.com/media/mCRJDo24UvJMA/giphy.gif');
@@ -108,29 +126,29 @@ html, body {
   display:flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: papayawhip;
+  background-color: #444;
   margin-left: 100px;
   margin-right: 100px;
 }
 
 .search {
   margin: 50px;
-  color: salmon;
+  color: #2A789A;
   font-family: "Trebuchet MS";
 }
 
 input {
-  color: salmon;
+  color: #2A789A;
   font-family: "Trebuchet MS";
 }
 
 button {
-  color: salmon;
+  color: #2A789A;
   font-family: "Trebuchet MS";
 }
 
 select{
-  color: salmon;
+  color: #2A789A;
   font-family: "Trebuchet MS";
 }
 .nav ul {

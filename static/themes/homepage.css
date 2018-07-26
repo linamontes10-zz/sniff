@@ -1,13 +1,29 @@
+
 h1 {
-  color: white;
   font-family: Arial;
   text-align: center;
 }
-body {
-    background-image: url(/static/images/background.jpg);
-    margin: 20px 5px 5px 20px;
-    padding:0;
+.sub {
+  color:;
+  font-family:Arial;
+  text-align: center;
+  font-size: 17px;
 }
+body {
+  background-image: url(/static/images/background.jpg);
+}
+
+.header{
+  margin: auto;
+   width: 35%;
+   height:25%;
+   /* border: 3px solid black; */
+   padding: 10px;
+   background-color: #2A789A;
+
+}
+
+
 
 
 .nav ul {
