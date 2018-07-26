@@ -24,8 +24,9 @@ h1 {
 body {
       background-image: url(/static/images/background.jpg);
       background-size: cover;
+      background-attachment: fixed;
       background-repeat: no-repeat;
-      transition: background-image  .9s ease-in-out;
+      transition: background-image .9s ease-in-out;
 
 }
 
