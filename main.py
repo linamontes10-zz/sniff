@@ -37,7 +37,7 @@ class PlaydateHandler(webapp2.RequestHandler):
             email = self.request.get('email')
             zipcode = self.request.get('zipcode')
             image = self.request.get('image')
-            
+
             dog_post = Dog(name=name,ownername=ownername,breed=breed,age=int(age),size=size,personality=personality, email=email,zipcode=int(zipcode), image=image)
             dog_key = dog_post.put()
 
@@ -95,6 +95,7 @@ class AboutUsHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/image', ImageHandler),
     ('/home', HomeHandler),
+    ('/', HomeHandler),
     ('/dogparks', DogParksHandler),
     ('/playdate', PlaydateHandler),
     ('/aboutus', AboutUsHandler),
