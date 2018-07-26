@@ -30,7 +30,7 @@
 
   #map {
     height: 600px;
-    width: 600px;
+    width: 100%;
     align-items: center;
   }
   /* Optional: Makes the sample page fill the window. */
