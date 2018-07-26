@@ -5,21 +5,24 @@
   <link href="/static/themes/newplaydate.css" rel="stylesheet">
 </head>
 <body class="news">
+<header>
   <div class="header"> <h1><img src="/static/images/bone.png" width="100px">SNIFF
     <img src="/static/images/paw.png" width="100px">
     <br/>
     <span class='sub'>"Finding a best friend for <u>human's</u>best friend!" </span>
   </h1> </div>
-<header>
-  <div class="nav">
-  <ul>
-    <li><a href="/home">Home</a></li>
-    <li><a class="active" href="/playdate">Playdate</a></li>
-    <li><a href="/dogparks">Dog Parks</a></li>
-    <li><a href="/aboutus">About</a></li>
-  </ul>
-</div>
-</header>
+  <header>
+    <div class="nav">
+
+    <ul>
+      <li class="home"><a href="/home">Home</a></li>
+      <li class="playdate"><a class="active" href="/playdate">Playdate</a></li>
+      <li class="dog"><a href="/dogparks">Dog Parks</a></li>
+      <li class="aboutus"><a  href="/aboutus">About</a></li>
+    </ul>
+  </div>
+  </header>
+
 
   {% if dogsfound %}
     <h1>  Your Sniffers at {{zipcode}} are waiting:</h1>

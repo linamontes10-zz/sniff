@@ -61,25 +61,25 @@ h3 {
   display:flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: papayawhip;
+  background-color: #444;
   margin-left: 100px;
   margin-right: 100px;
-  color: salmon;
+  color:;
   font-family: "Trebuchet MS";
 }
 
 input {
-  color: salmon;
+  color:;
   font-family: "Trebuchet MS";
 }
 
 button {
-  color: salmon;
+  color: ;
   font-family: "Trebuchet MS";
 }
 
 select{
-  color: salmon;
+  color: ;
   font-family: "Trebuchet MS";
 }
 
