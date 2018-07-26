@@ -89,16 +89,3 @@ var navbar = document.getElementById('navbar');
 
     });
   }
-var allimages= ['http://www.insidedogsworld.com/wp-content/uploads/2016/10/Fotolia_34937840_Subscription_L.jpg', 'https://urbanmatter.com/chicago/wp-content/uploads/2017/05/6984704-dog-sea-ship-beach-1300x813.jpg', 'https://www.sccmo.org/ImageRepository/Document?documentID=3747', 'https://www.dogmal.com/wp-content/uploads/2016/10/beagle-dog-breed.jpg', 'https://www.capecod.com/wp-content/uploads/Dog-Beach.jpg'];
-var url= 0
-setInterval(function(){
-  if (url==0 || url != allimages.length-1){
-    console.log(document.body.style.backgroundImage)
-    document.body.style.backgroundImage = "url(" + allimages[url] + ")"
-    url += 1
-  }else if (url = allimages.length-1) {
-    console.log(document.body.style.backgroundImage)
-    document.body.style.backgroundImage= "url(" + allimages[url] + ")"
-    url = 0
-  }
-},1000);
