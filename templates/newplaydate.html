@@ -33,10 +33,10 @@
           <br>
             What size is your dog?
           <select name="size">
-            <option value="volvo">Small (under 20 pounds)</option>
-            <option value="saab">Medium (25-50 pounds)</option>
-            <option value="fiat">Large (50-70 pounds)</option>
-            <option value="audi">Extra Large (70+ pounds )</option>
+            <option value="small">Small (under 20 pounds)</option>
+            <option value="medium">Medium (25-50 pounds)</option>
+            <option value="large">Large (50-70 pounds)</option>
+            <option value="extra large">Extra Large (70+ pounds )</option>
           </select>
           <br>
             How would you describe your dog's personality?
@@ -48,6 +48,9 @@
             Lastly, what is your zipcode?
           <input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" placeholder="ex. 11111"/>
           <br>
+          Upload a picture of your dog:
+          <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg, image/jpg" />
+          <br>
           <button type="submit"> Submit </button>
         </p>
       </form>
@@ -56,7 +59,6 @@
   {% for dog in dogs%}
     <div class="dogprofiles">
       <h2>  {{dog.name}} </h2>
-       <img src="/static/images/Austin.jpg"> <br/>
        <img src="/image?id={{dog.key.urlsafe()}}"> <br/>
        <h3 class="doginfo">
          Owner Name: {{dog.ownername}}
@@ -76,90 +78,5 @@
      </div>
     {% endfor %}
 
-
-
-
- <!-- <div class="dogprofiles">
-   <h2>  Austin </h2>
-    <img src="/static/images/Austin.jpg"> <br/>
-    <h3 class="doginfo">
-      Owner Name: Lina Montes
-       <br/>
-      Breed: Mix between a German Shepherd and Golden Retriever
-      <br>
-      Age: 3 Years Old
-      <br>
-      Size: Large
-      <br/>
-      Personality: Very shy and one-on-one; <br/>
-      loves to run and tummy rubs!
-      <br/>
-      <a href="mailto:austinandlina@gmail.com">Email Us</a>
-    </h3>
-  </div>
-
-<div class="dogprofiles">
-    <h2> Headwig the Second </h2>
-    <img src="/static/images/peri.jpeg"> <br/>
-    <h3 class="doginfo">
-      Owner Name: Harry Potter
-      <br/>
-      Breed: Poodle/ Cavalier King Charles Spaniel
-      <br>
-      Age: 5 Years Old
-      <br>
-      Size: Medium
-      <br/>
-      Personality: Active pupper who loves to make new friends;<br/>
-      barks at everything!
-      <br/>
-      <a href="mailto:hedwigandharry@gmail.com">Email Us</a>
-
-    </h3>
-  </div>
-
-  <div class="dogprofiles">
-    <h2> Bok Choy </h2>
-    <img src="/static/images/chow.jpeg"> <br/>
-    <h3 class="doginfo">
-      Owner Name: Monique Wade
-       <br/>
-      Breed: Purebred Chow Chow
-      <br>
-      Age: 2 Years Old
-      <br>
-      Size: Medium
-      <br/>
-      Personality: Spoiled and a little rough around the edges <br/>
-      however once comfortable will be your best friend!
-       <br/>
-      <a href="mailto:bokandmo@gmail.com">Email Us</a>
-
-    </h3>
-  </div>
-
-  <div class="dogprofiles">
-    <h2> Cookie </h2>
-    <img src="/static/images/collie.jpeg">
-    <h3 class="doginfo">
-
-      Owner Name: Efrain Escamilla
-      <br/>
-      Breed: Collie Retriever
-      <br>
-      Age: 4 Years Old
-      <br>
-      Size: Large
-      <br/>
-      Personality: A little crazy and jumpy when meeting new people <br/>
-      but only because she is so excited to name new friends!
-      <br/>
-      <a href="mailto:cookieandefrain@gmail.com">Email Us</a>
-
-    </h3>
-  </div> -->
-</td>
-</tr>
-</table>
 </body>
 </html>
