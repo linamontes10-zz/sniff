@@ -1,5 +1,6 @@
 import webapp2
 import jinja2
+import urllib
 import os
 from google.appengine.ext import ndb
 from model import *
@@ -45,8 +46,8 @@ class PlaydateHandler(webapp2.RequestHandler):
         zipcode_query = Dog.query(Dog.zipcode==int(zipcode))
         check_zipcode_query = zipcode_query.fetch()
 
-        if name:
-            check_zipcode_query.insert(0, dog_post)
+        # if name:
+        #     check_zipcode_query.insert(0, dog_post)
 
         if not check_zipcode_query:
             dogs = Dog.query().fetch()
