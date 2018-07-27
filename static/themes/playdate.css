@@ -215,7 +215,25 @@ select{
   }
   */
 }
+@media only screen and (max-width: 600px) {
+  .searchflex{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #2A789A;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
+  .search {
+    margin: 10px;
+    color: black;
+    font-family: "Trebuchet MS";
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 
 /* ------------------------ */
 
